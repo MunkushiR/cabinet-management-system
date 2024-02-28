@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import HomePage from './HomePage';
+import CabinetMeetingsPage from './CabinetMeetingsPage';
+import DepartmentMeetingsPage from './DepartmentMeetingsPage';
+import InterdepartmentalMeetingsPage from './InterdepartmentalMeetingsPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/" component={LoginPage} />
+                <Route path="/home" component={HomePage} />
+                <Route path="/cabinet-meetings" component={CabinetMeetingsPage} />
+                <Route path="/department-meetings" component={DepartmentMeetingsPage} />
+                <Route path="/interdepartmental-meetings" component={InterdepartmentalMeetingsPage} />
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
