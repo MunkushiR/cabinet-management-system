@@ -1,6 +1,5 @@
 // InterdepartmentalMeetingsPage.js
 import React from 'react';
-import './styles.css'; // Import CSS for styling
 
 function InterdepartmentalMeetingsPage() {
     return (
